@@ -1,6 +1,5 @@
 package com.tolujacob.book_network.auth;
 
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
@@ -9,17 +8,12 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+
 @Getter
 @Setter
 @Builder
-public class Registration {
+public class AuthenticationRequest {
 
-    @NotEmpty(message = "First name is required")
-    @NotBlank(message = "First name is required")
-    private String firstname;
-    @NotEmpty(message = "Last name is required")
-    @NotBlank(message = "Last name is required")
-    private String lastname;
     @Email(message = "Email is not formatted")
     @NotEmpty(message = "E-mail is required")
     @NotBlank(message = "E-mail is required")
