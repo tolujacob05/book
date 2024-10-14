@@ -41,7 +41,6 @@ public class JwtFilter extends OncePerRequestFilter {
             return;
         }
         jwt = authHeader.substring(7);
-
         if(jwt.chars().filter(ch -> ch == '.').count() == 2) {
             userEmail = jwtService.extractUsername(jwt);
 
